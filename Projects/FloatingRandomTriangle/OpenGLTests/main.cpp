@@ -40,8 +40,11 @@ static const char* vShader = "          \n\
 \n\
 uniform mat4 model;\n\
 layout (location = 0) in vec3 pos;\n\
+out vec4 vColor;\n\
 void main(){\n\
 	gl_Position = model * vec4(pos.x, pos.y, pos.z, 1.0);\n\
+	vec3 tempPos = vec3(gl_Position.x, gl_Position.y, gl_Position.z);\n\
+	vColor = vec4(clamp(tempPos, 0.0f, 1.0f), 1.0);\n\
 }\n\
 ";
 
@@ -49,9 +52,10 @@ void main(){\n\
 static const char* fShader = "\n\
 #version 330													\n\
 \n\
+in vec4 vColor;\n\
 out vec4 color;\n\
 void main(){\n\
-	color = vec4(1.0, 1.0, 0.0, 1.0);\n\
+	color = vColor;\n\
 }\n\
 ";
 
