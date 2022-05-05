@@ -28,6 +28,9 @@
     <ClCompile Include="imgui_widgets.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="PlaneSweepTriangulation.cpp" />
+    <ClCompile Include="Points.cpp" />
+    <ClCompile Include="RandomizedIncrementalTriangulation.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
@@ -42,6 +45,9 @@
     <ClInclude Include="imstb_textedit.h" />
     <ClInclude Include="imstb_truetype.h" />
     <ClInclude Include="Mesh.h" />
+    <ClInclude Include="PlaneSweepTriangulation.h" />
+    <ClInclude Include="Points.h" />
+    <ClInclude Include="RandomizedIncrementalTriangulation.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>

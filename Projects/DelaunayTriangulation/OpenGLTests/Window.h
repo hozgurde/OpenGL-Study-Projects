@@ -21,11 +21,15 @@ public:
 
 	void SwapBuffers() { glfwSwapBuffers(mainWindow); }
 
+	GLFWwindow* GetGLFWwindow() { return mainWindow; }
+
 	~Window();
 
 private:
 	GLFWwindow* mainWindow;
 
 	GLint width, height, bufferWidth, bufferHeight;
+
+
 };
 
